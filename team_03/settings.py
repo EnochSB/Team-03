@@ -42,7 +42,7 @@ ALLOWED_HOSTS = [
     'port-0-team-03-1lfmx2blhdo8dn5.sel4.cloudtype.app',
     'port-0-team-03-xiy3e2blhdsgslz.sel4.cloudtype.app',
     '127.0.0.1',
-    'port-0-team-03-17xqnr2algnav219.sel3.cloudtype.app/',
+    'port-0-team-03-17xqnr2algnav219.sel3.cloudtype.app',
     ]
 
 
