@@ -24,16 +24,16 @@ def get_address(lat, lng):
 
 def index(request):
     
-    url = f'https://www.googleapis.com/geolocation/v1/geolocate?key={settings.GOOGLE_KEY}'
-    data = {
-        'considerIp': True,
-    }
+    # url = f'https://www.googleapis.com/geolocation/v1/geolocate?key={settings.GOOGLE_KEY}'
+    # data = {
+    #     'considerIp': True,
+    # }
 
-    result = requests.post(url, data).text
-    result = eval(result)
-    full_address = get_address(str(result['location']['lat']), str(result['location']['lng']))
-    my_location = full_address['documents'][0]['region_3depth_name']
-    print(my_location)
+    # result = requests.post(url, data).text
+    # result = eval(result)
+    # full_address = get_address(str(result['location']['lat']), str(result['location']['lng']))
+    # my_location = full_address['documents'][0]['region_3depth_name']
+    # print(my_location)
 
     region = request.GET.get('region')
     region_search_param = request.GET.get('region_search')
@@ -70,7 +70,7 @@ def index(request):
     context = {
         'dinings': dinings,
         'tags': random_tags,
-        'my_location': my_location,
+        # 'my_location': my_location,
         'region_dinings': region_dinings,
         'is_selected': is_selected,
         'select_region': select_region,

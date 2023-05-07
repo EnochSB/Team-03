@@ -167,21 +167,21 @@
   
   console.log(myLocBtn);
   
-  myLocBtn.addEventListener('click', function(event) {
+  {% comment %} myLocBtn.addEventListener('click', function(event) {
     event.preventDefault();
     loc = '{{ my_location }}'
     const url = `/dinings/?region=${loc}`;
     window.location.href = url;
-  });
+  }); {% endcomment %}
 
   function updateLocationDiv(loc) {
     locationDiv.textContent = loc;
   }
 
   updateLocationDiv(loc);
-  if (loc==='') {
+  {% comment %} if (loc==='') {
     loc = '{{ my_location }}'
-  }
+  } {% endcomment %}
 
   console.log('{{select_region}}')
 
